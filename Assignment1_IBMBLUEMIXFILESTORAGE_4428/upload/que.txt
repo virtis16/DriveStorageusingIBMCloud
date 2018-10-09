@@ -1,0 +1,79 @@
+1. Find earthquakes between range _ _ 
+select * from eqs where latitude between 13 and 63 and longitude between -150 and -97
+
+2. How many earth quakes between magnitude __ :
+select * from eqs where mag between 1.5 and 4
+
+3.Number of earthquakes in a CA 
+select * from eqs where place like '%CA'
+ 
+4.Number of earthquakes on a particular day
+
+
+select distinct dayname(time) from eqs
+select * from eqs where dayname(time)='sunday';
+
+5.Eartquakes within 10 degrees of our current location
+select * from eqs where latitude between 13 and 63 and longitude between -150 and -97
+
+6.Cleaning data:
+if data type is text : delete from eqs where gap =''
+if data type is varchar : delete from eqs where gap is null;
+fr paticular value:delete from eqs where longitude=99
+
+
+7. Number of earthquakes in a particular city of magnitude between _ and _
+ select Count(*) from eqs where place like '%Hawaii' and mag between 0 and 4
+
+19:21:24	SET SQL_SAFE_UPDATES = 0	0 row(s) affected	0.047 sec
+
+
+8. The highest number of time earthquake has occured amougnst all magnitudes magnitude 
+select mag,count(*) as count from eqs group by mag  order by count desc limit 1
+
+9.Place query different formats:
+
+
+
+placeQuery = "select * from quakes where place Like '%s' or place like '%s'" %(str(place1),str(place2))
+
+query3 = "select * from quakes where place Like '%"+place1+"' or place like '%"+place2+"'"
+
+"select Count(*) from quakes123 where place like '"+ p +"' or place like  '%Alaska' "
+
+
+
+11.select * from equakes1 where latitude!='' and longitude!='' and 
+( 3959 * acos( cos( radians(13.5776) ) * cos( radians( 13.5776 ) )
+ * cos( radians( -91.3198 ) - radians(" -91.3198 ") ) + sin( radians(13.5776) ) 
+ * sin( radians( 13.5776 ) ) ) ) < 5
+
+
+12.update quakes set nst='0' where nst = ''
+
+
+13. Random queries:
+select * from quakes where mag between (select min(mag) from quakes) and (select max(mag) from quakes) having place like '%Alaska';
+select * from quakes;
+select count(*) from quakes where place like '%CA' or place like '%Alaska' or place like '%Oklahoma';
+select * from quakes where time(time) between time('00:00:00') and time('01:00:00');
+select * from quakes where time(time) LIMIT 1 ;
+select * from quakes where DAY(time) between day('2016-05-01') and day('2016-05-01');
+select count(*) from quakes;
+select * from quakes where dayname(time)='Sunday' ;
+select count(*),place from quakes where mag>2.5 group by place ;
+SET SQL_SAFE_UPDATES=0;
+update quakes set mag=100 where latitude >59 and latitude<60;
+
+
+14.10.https://dev.mysql.com/doc/refman/5.7/en/date-and-time-functions.html
+
+Time and Date queries: 
+
+select * from test1 where DAY(time)=DAY('2016-05-02');
+select time from test1 where time like '%21:49:38%';
+
+
+
+age and name function to copy:
+

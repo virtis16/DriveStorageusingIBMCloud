@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cloud computing</title>
+</head>
+{{res }}
+<h1>Assignment 1</h1>
+<form name="upload" action="/" method="post" enctype="multipart/form-data">
+    <h4> upload your file here:</h4>
+ <input type="file" name="file_upload"> <br>
+     <h4> input your key here:</h4>
+    <input type="text" name="key">
+  <input type="submit" name="submit" value="Upload"> <br>
+
+    <h4> download your file here:</h4>
+    <input type="text" name="file_download">
+
+    <input type="text" name="dkey">
+    <input type="submit" name="submit" value="Download" onclick="dld()"> <br>
+
+    <h4> list your cloud files here:</h4>
+    <input type="submit" name="submit" value="List"> <br>
+
+
+    <h4> list your local files here:</h4>
+    <input type="submit" name="submit" value="Listlocal"> <br>
+
+    <h4> enter size and remove your file here:</h4>
+    <input type="text" name="fsize">
+    <input type="submit" name="submit" value="Remove"> <br>
+
+    <h4> enter name of the file to remove:</h4>
+    <input type="text" name="file_delete">
+    <input type="submit" name="submit" value="Delete"> <br>
+
+
+</form>
+
+<form action="Exit">
+<h4> Exit:</h4>
+
+    <input type="submit"  value="Exit"> <br>
+</form>
+</body>
+</html>

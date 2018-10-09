@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cloud computing</title>
+    <!--<script type="text/javascript">-->
+    <!--function dld(filename){-->
+    <!--alert(filename);-->
+    <!--window.location.href="./static/";-->
+
+    <!--}-->
+    <!--</script>-->
+</head>
+{{res }}
+<!--{{file_download}}-->
+<body style="background-color:gray">
+<h1> Name : Virti Bipin Sanghavi</h1>
+<h3>Student ID : 4428</h3>
+<h2>Web Interface for IBM Cloud Storage</h2>
+<form name="upload" action="/" method="post" enctype="multipart/form-data">
+    <h4> UPLOAD FILE:</h4>
+ <input type="file" name="file_upload"> <br>
+     <h4> Please Input your key here</h4>
+    <input type="text" name="key">
+  <input type="submit" name="submit" value="Upload"> <br>
+
+    <h4> DOWNLOAD FILE</h4>
+    <input type="text" name="file_download">
+    <h4>Enter your key here</h4>
+    <input type="text" name="dkey">
+    <input type="submit" name="submit" value="Download">
+           <!--//onclick=dld("{{file_download}}")>-->
+    <br>
+
+    <h4>List of Files on IBM Cloud</h4>
+    <input type="submit" name="submit" value="List"> <br>
+
+
+    <!--<h4> list your local files here:</h4>-->
+    <!--<input type="submit" name="submit" value="Listlocal"> <br>-->
+
+    <h4> Enter the size of the files and remove the files greater than the size supplied</h4>
+    <input type="text" name="fsize">
+    <input type="submit" name="submit" value="Remove"> <br>
+
+    <h4>Enter the file name to be deleted</h4>
+    <input type="text" name="file_delete">
+    <input type="submit" name="submit" value="Delete"> <br>
+
+</form>
+
+<form action="Exit">
+<h4> Exit</h4>
+
+    <input type="submit"  value="Exit"> <br>
+</form>
+</body>
+</html>
